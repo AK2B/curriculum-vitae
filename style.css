@@ -20,9 +20,6 @@
         grid-template-columns: 1fr;
         grid-template-areas: "header" "main" "aside" "footer"
     }
-    #infos {
-        font-size: 1.5rem;
-    }
 }
 
 @media (min-width: 1200px) {
