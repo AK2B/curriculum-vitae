@@ -15,7 +15,7 @@
 img {
     margin-left: auto;
     max-width: 15em;
-    max-height: 15em;
+    display: none;
 }
 
 body {
@@ -60,5 +60,9 @@ footer {
         grid-gap: 1px;
         grid-template-columns: 30% 65%;
         grid-template-areas: "header header" "aside main" "footer footer"
+    }
+    #profile,
+    img {
+        display: block;
     }
 }
