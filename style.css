@@ -65,4 +65,7 @@ footer {
     img {
         display: block;
     }
+    .ulMain {
+        column-count: 2;
+    }
 }
