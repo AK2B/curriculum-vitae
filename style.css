@@ -11,8 +11,7 @@
     grid-template-areas: "header" "main" "aside" "footer"
 }
 
-#profile,
-img {
+#profile {
     margin-left: auto;
     max-width: 15em;
     display: none;
@@ -61,8 +60,7 @@ footer {
         grid-template-columns: 30% 65%;
         grid-template-areas: "header header" "aside main" "footer footer"
     }
-    #profile,
-    img {
+    #profile {
         display: block;
     }
     .ulMain {
