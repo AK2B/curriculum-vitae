@@ -1,86 +1,98 @@
-*,
- ::before,
- ::after {
-    box-sizing: border-box;
-    margin: 1;
-    padding: 1;
-}
-
-#container {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "main" "aside" "footer"
-}
-
-#profile {
-    margin-left: auto;
-    max-width: 15em;
-    display: none;
-}
-
-#linkedin {
-    margin-top: 1em;
-    margin-left: auto;
-    margin-right: 1em;
-}
-
-#copyR {
-    margin: auto;
-}
-
-#github {
-    margin-top: 1em;
-    margin-right: auto;
-    margin-left: 1em;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-header {
-    grid-area: header;
-    background: rgb(79, 70, 202);
-    display: flex;
-    align-items: center;
-}
-
-main {
-    grid-area: main;
-    text-align: left;
-    background: deepskyblue;
-}
-
-aside {
-    grid-area: aside;
-    background: rgb(182, 181, 182);
-}
-
-footer {
-    grid-area: footer;
-    display: flex;
-    text-align: center;
-    background: rgb(119, 117, 119);
-}
-
-header,
-main,
-aside,
-footer {
-    padding: 20px;
-    margin: 5px;
-}
-
-@media screen and (min-width: 593px) {
-    #container {
-        display: grid;
-        grid-gap: 1px;
-        grid-template-columns: 30% 65%;
-        grid-template-areas: "header header" "aside main" "footer footer"
-    }
-    #profile {
-        display: block;
-    }
-    .ulMain {
-        column-count: 2;
-    }
-}
+        *,
+         ::before,
+         ::after {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1000px;
+            grid-template-columns: 1fr;
+            grid-template-areas: "header" "main" "aside"
+        }
+        
+        #profile {
+            max-width: 15em;
+            display: none;
+            margin-right: 3rem;
+        }
+        
+        #infos {
+            margin-left: auto;
+            text-align: right;
+        }
+        
+        #linkedin {
+            margin-left: auto;
+            margin-right: 1em;
+        }
+        
+        #github {
+            margin-right: auto;
+            margin-left: 1em;
+        }
+        
+        h1 {
+            border-style: outset;
+            position: fixed;
+            padding-left: 10px;
+            display: block;
+            width: 100%;
+            background: #ffffff;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 2;
+            background: #F2EED0;
+            background: -moz-linear-gradient(top, #F2EED0 0%, #8AB2E2 25%, #FFFFFF 100%);
+            background: -webkit-linear-gradient(top, #F2EED0 0%, #8AB2E2 25%, #FFFFFF 100%);
+            background: linear-gradient(to bottom, #F2EED0 0%, #8AB2E2 25%, #FFFFFF 100%);
+        }
+        
+        header {
+            grid-area: header;
+            display: flex;
+            align-items: center;
+        }
+        
+        main {
+            grid-area: main;
+            text-align: left;
+        }
+        
+        aside {
+            grid-area: aside;
+        }
+        
+        footer {
+            border-style: inset;
+            display: flex;
+            text-align: center;
+            background-image: radial-gradient(circle, #4758a1, #7a7eb8, #a8a7cf, #d4d2e7, #ffffff);
+        }
+        
+        header,
+        main,
+        aside,
+        footer {
+            padding: 30px;
+        }
+        
+        @media screen and (min-width: 593px) {
+            #container {
+                width: 100%;
+                display: grid;
+                grid-gap: 1px;
+                grid-template-columns: 30% 70%;
+                grid-template-areas: "header header" "aside main"
+            }
+            #profile {
+                display: block;
+            }
+            .ulMain {
+                column-count: 2;
+            }
+        }
