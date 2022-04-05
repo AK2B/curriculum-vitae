@@ -16,7 +16,6 @@
         #profile {
             max-width: 15em;
             display: none;
-            margin-right: 5rem;
         }
         
         #infos {
@@ -27,7 +26,16 @@
         
         #github,
         #linkedin {
-            padding: 20px;
+            padding: 10px;
+            justify-content: center;
+        }
+        
+        #github {
+            padding-right: 25px;
+        }
+        
+        #linkedin {
+            padding-left: 25px;
         }
         
         #nom {
@@ -35,7 +43,7 @@
             position: fixed;
             display: flex;
             width: 100%;
-            background: #e3e3e3;
+            background: #F2EED0;
             justify-content: center;
         }
         
@@ -71,17 +79,17 @@
         main {
             grid-area: main;
             text-align: left;
-            border-style: inset;
         }
         
         aside {
             grid-area: aside;
-            border-style: inset;
+            border-right: solid rgb(192, 192, 192);
         }
         
         footer {
             text-align: center;
             padding: 15px;
+            border-style: outset;
         }
         
         header,
@@ -107,5 +115,12 @@
             }
             h1 {
                 padding-left: 3rem;
+            }
+        }
+        
+        @media screen and (min-width: 458px) {
+            #profile {
+                display: block;
+                margin-right: 0.3rem;
             }
         }
