@@ -8,20 +8,34 @@
         #container {
             margin-left: auto;
             margin-right: auto;
-            max-width: 1300px;
+            max-width: 1400px;
             grid-template-columns: 1fr;
-            grid-template-areas: "header" "main" "aside"
+            grid-template-areas: "header" "accroche" "langages" "main" "aside"
         }
         
         #profile {
             max-width: 15em;
             display: none;
+            margin: 2em;
         }
         
         #infos {
             margin-left: auto;
             text-align: right;
             line-height: 2.5;
+        }
+        
+        #accroche {
+            grid-area: accroche;
+            padding: 10px;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        #langages {
+            grid-area: langages;
+            padding: 15px;
+            border-top: #c7c7c7;
         }
         
         #github,
@@ -105,10 +119,11 @@
                 display: grid;
                 grid-gap: 1px;
                 grid-template-columns: 35% 65%;
-                grid-template-areas: "header header" "aside main"
+                grid-template-areas: "header header" "langages accroche" "aside main"
             }
             #profile {
                 display: block;
+                padding-left: 80px;
             }
             .ulMain {
                 column-count: 2;
@@ -118,7 +133,7 @@
             }
         }
         
-        @media screen and (min-width: 458px) {
+        @media screen and (min-width: 489px) {
             #profile {
                 display: block;
                 margin-right: 0.3rem;
