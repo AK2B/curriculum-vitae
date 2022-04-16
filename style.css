@@ -14,28 +14,51 @@
         }
         
         #profile {
-            max-width: 15em;
+            width: 35%;
             display: none;
-            margin: 2em;
+        }
+        
+        #keyword {
+            top: 50%;
         }
         
         #infos {
+            padding-right: 30px;
             margin-left: auto;
             text-align: right;
-            line-height: 2.5;
+            line-height: 2;
+            width: 60%;
+            justify-items: center;
         }
         
         #accroche {
             grid-area: accroche;
-            padding: 10px;
             text-align: center;
-            justify-content: center;
+            position: relative;
+            margin-top: 2.5em;
+            margin-bottom: 4.5em;
+        }
+        
+        #photo {
+            width: 220px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-bottom: 5px;
+        }
+        
+        #poste {
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            padding: 15px;
         }
         
         #langages {
             grid-area: langages;
             padding: 15px;
-            border-top: #c7c7c7;
         }
         
         #github,
@@ -53,6 +76,7 @@
         }
         
         #nom {
+            z-index: 1;
             border-style: outset;
             position: fixed;
             display: flex;
@@ -86,18 +110,20 @@
         header {
             grid-area: header;
             display: flex;
-            align-items: center;
             padding-top: 20px;
+            justify-content: center;
         }
         
         main {
             grid-area: main;
             text-align: left;
+            border-top: solid rgb(192, 192, 192);
         }
         
         aside {
             grid-area: aside;
             border-right: solid rgb(192, 192, 192);
+            border-top: solid rgb(192, 192, 192);
         }
         
         footer {
@@ -106,7 +132,6 @@
             border-style: outset;
         }
         
-        header,
         main,
         aside {
             padding-left: 30px;
@@ -114,7 +139,7 @@
             line-height: 2;
         }
         
-        @media screen and (min-width: 700px) {
+        @media screen and (min-width: 839px) {
             #container {
                 display: grid;
                 grid-gap: 1px;
@@ -123,7 +148,7 @@
             }
             #profile {
                 display: block;
-                padding-left: 80px;
+                align-content: center;
             }
             .ulMain {
                 column-count: 2;
@@ -131,11 +156,13 @@
             h1 {
                 padding-left: 3rem;
             }
+            #photo {
+                padding-left: 0;
+            }
         }
         
         @media screen and (min-width: 489px) {
             #profile {
                 display: block;
-                margin-right: 0.3rem;
             }
         }
