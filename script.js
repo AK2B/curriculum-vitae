@@ -1,5 +1,9 @@
+/**
+ *Lance nos deux fonctions une fois la page chargée
+ */
 if (document.readyState === "complete") {
     naissance();
+    typewriter();
 } else {
     document.addEventListener("DOMContentLoaded", function() {
         naissance();
@@ -7,6 +11,9 @@ if (document.readyState === "complete") {
     });
 }
 
+/**
+ * Calcule dynamique de l'age
+ */
 function naissance() {
     var today = new Date();
     var birthDate = new Date("11 25 1987");
@@ -17,21 +24,20 @@ function naissance() {
     }
     return (document.getElementById("naissance").innerHTML = age + " ans");
 }
-////////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////////
-
+/**
+ * Affichage animation phrase d'accroche
+ */
 var aText = new Array(
     "Je recherche actuellement une alternance de 2 ans pour une formation de développeur d'application iOS / Android. "
 );
-var iSpeed = 30; // time delay of print out
-var iIndex = 0; // start printing array at this posision
-var iArrLength = aText[0].length; // the length of the text array
-var iScrollAt = 20; // start scrolling up at this many lines
-
-var iTextPos = 0; // initialise text position
-var sContents = ""; // initialise contents variable
-var iRow; // initialise current row
+var iSpeed = 30;
+var iIndex = 0;
+var iArrLength = aText[0].length;
+var iScrollAt = 20;
+var iTextPos = 0;
+var sContents = "";
+var iRow;
 
 function typewriter() {
     sContents = " ";
