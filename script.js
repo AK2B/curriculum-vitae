@@ -3,6 +3,7 @@ if (document.readyState === "complete") {
 } else {
     document.addEventListener("DOMContentLoaded", function() {
         naissance();
+        typewriter();
     });
 }
 
@@ -53,4 +54,3 @@ function typewriter() {
         setTimeout("typewriter()", iSpeed);
     }
 }
-typewriter();
