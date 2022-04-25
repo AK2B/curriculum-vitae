@@ -3,11 +3,9 @@
  */
 if (document.readyState === "complete") {
     naissance();
-    typewriter();
 } else {
     document.addEventListener("DOMContentLoaded", function() {
         naissance();
-        typewriter();
     });
 }
 
@@ -25,38 +23,20 @@ function naissance() {
     return (document.getElementById("naissance").innerHTML = age + " ans");
 }
 
-/**
- * Affichage animation phrase d'accroche
- */
-var aText = new Array(
-    "Je recherche actuellement une alternance de 2 ans pour une formation de développeur d'application iOS / Android. "
-);
-var iSpeed = 30;
-var iIndex = 0;
-var iArrLength = aText[0].length;
-var iScrollAt = 20;
-var iTextPos = 0;
-var sContents = "";
-var iRow;
+var text = document.getElementById("poste");
+var newDom = "";
+var animationDelay = 6;
 
-function typewriter() {
-    sContents = " ";
-    iRow = Math.max(0, iIndex - iScrollAt);
-    var destination = document.getElementById("poste");
+for (let i = 0; i < text.innerText.length; i++) {
+    newDom +=
+        '<p class="char">' +
+        (text.innerText[i] == " " ? "&nbsp;" : text.innerText[i]) +
+        "</p>";
+}
 
-    while (iRow < iIndex) {
-        sContents += aText[iRow++] + "<br />";
-    }
-    destination.innerHTML =
-        sContents + aText[iIndex].substring(0, iTextPos) + "_";
-    if (iTextPos++ == iArrLength) {
-        iTextPos = 0;
-        iIndex++;
-        if (iIndex != aText.length) {
-            iArrLength = aText[iIndex].length;
-            setTimeout("typewriter()", 500);
-        }
-    } else {
-        setTimeout("typewriter()", iSpeed);
-    }
+text.innerHTML = newDom;
+var length = text.children.length;
+
+for (let i = 0; i < length; i++) {
+    text.children[i].style["animation-delay"] = animationDelay * i + "ms";
 }
