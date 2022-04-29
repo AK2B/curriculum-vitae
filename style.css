@@ -13,10 +13,20 @@
             background: linear-gradient(to bottom, #F2EED0 0%, #8AB2E2 25%, #FFFFFF 100%);
         }
         
+        nav {
+            grid-area: nom;
+            z-index: 1;
+            width: 100%;
+            border-style: outset;
+            position: fixed;
+            display: flex;
+            background: #F2EED0;
+            justify-content: center;
+        }
+        
         header {
             grid-area: header;
             display: flex;
-            justify-content: center;
         }
         
         main {
@@ -28,7 +38,6 @@
         }
         
         footer {
-            grid-area: footer;
             text-align: center;
             padding: 15px;
             border-style: outset;
@@ -51,7 +60,7 @@
         
         h2,
         h3 {
-            padding-top: 1rem;
+            padding-top: 10px;
         }
         
         ul {
@@ -60,18 +69,9 @@
         /********************************/
         /********************************/
         
-        #container {
-            margin-left: auto;
-            margin-right: auto;
-            grid-template-columns: 1fr;
-            grid-template-areas: "header" "accroche" "langages" "main" "aside"
-        }
-        /********************************/
-        /********************************/
-        
         #github,
         #linkedin {
-            padding: 10px;
+            padding: 15px;
             justify-content: center;
         }
         
@@ -82,16 +82,14 @@
         #linkedin {
             padding-left: 25px;
         }
+        /********************************/
+        /********************************/
         
-        #nom {
-            grid-area: nom;
-            z-index: 1;
-            border-style: outset;
-            position: fixed;
-            display: flex;
-            width: 100%;
-            background: #F2EED0;
-            justify-content: center;
+        #container {
+            margin-left: auto;
+            margin-right: auto;
+            grid-template-columns: 1fr;
+            grid-template-areas: "header" "enTete" "main" "aside"
         }
         /********************************/
         /********************************/
@@ -100,7 +98,6 @@
             grid-area: photo;
             width: 35%;
             display: none;
-            border: none;
         }
         
         #photo {
@@ -123,7 +120,7 @@
             margin-left: auto;
             text-align: right;
             line-height: 2;
-            width: 60%;
+            width: 65%;
             justify-items: center;
             border: none;
         }
@@ -134,17 +131,21 @@
             grid-area: enTete;
             border-radius: 30px;
             background: rgba(248, 241, 211, 0.192);
+            padding: 15px;
+            margin: 10px;
         }
         
         #langages {
             grid-area: langages;
             padding: 15px;
+            margin-top: 20px;
         }
         
         #accroche {
             grid-area: accroche;
             text-align: center;
             position: relative;
+            padding-bottom: 80px;
         }
         
         #poste {
@@ -163,6 +164,8 @@
             animation: an 1s ease-out 1 both;
             display: inline-block;
         }
+        /********************************/
+        /********************************/
         
         @keyframes an {
             from {
@@ -181,7 +184,7 @@
             #container {
                 display: grid;
                 grid-gap: 20px;
-                max-width: 1450px;
+                max-width: 1500px;
                 grid-template-columns: 35% 65%;
                 grid-template-areas: "header header" "enTete enTete" "aside main"
             }
@@ -192,7 +195,7 @@
             .ulMain {
                 column-count: 2;
             }
-            #nom {
+            nav {
                 width: inherit;
                 width: 100%;
             }
