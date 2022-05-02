@@ -102,11 +102,12 @@
         
         #profile {
             grid-area: photo;
-            width: 30%;
+            width: 45%;
+            text-align: center;
         }
         
         #photo {
-            width: 100px;
+            width: 150px;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -122,7 +123,7 @@
             text-align: right;
             line-height: 2;
             font-weight: bold;
-            width: 70%;
+            width: 55%;
             justify-items: center;
             border: none;
         }
@@ -184,12 +185,12 @@
             h1 {
                 padding-left: 3rem;
             }
-            #photo {
-                padding-left: 0;
-                width: 160px;
+            #profile {
+                width: 30%;
             }
             #infos {
                 margin-right: 20px;
+                width: 70%;
             }
             #enTete {
                 display: grid;
@@ -208,6 +209,6 @@
             }
             #photo {
                 padding-left: 0;
-                width: 160px;
+                width: 200px;
             }
         }
