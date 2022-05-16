@@ -1,6 +1,7 @@
         *,
          ::before,
          ::after {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
@@ -9,6 +10,7 @@
         
         body {
             font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
             background: #F2EED0;
             background: -moz-linear-gradient(top, #F2EED0 0%, #8AB2E2 25%, #FFFFFF 100%);
             background: -webkit-linear-gradient(top, #F2EED0 0%, #8AB2E2 25%, #FFFFFF 100%);
@@ -27,6 +29,7 @@
         /********************************/
         
         #container {
+            box-sizing: border-box;
             padding-top: 20px;
             margin-left: auto;
             margin-right: auto;
@@ -131,7 +134,11 @@
         /********************************/
         
         #enTete {
+            box-sizing: border-box;
+            display: grid;
             grid-area: enTete;
+            grid-template-columns: 1fr;
+            grid-template-areas: "accroche" "langages";
             border-radius: 30px;
             background: rgba(248, 241, 211, 0.192);
             padding: 15px;
@@ -187,6 +194,7 @@
             }
             #profile {
                 width: 30%;
+                padding-left: 0;
             }
             #infos {
                 margin-right: 20px;
@@ -210,5 +218,12 @@
             #photo {
                 padding-left: 0;
                 width: 200px;
+            }
+        }
+        
+        @media screen and (max-width: 450px) {
+            #poste {
+                padding-top: 40px;
+                padding-bottom: 60px;
             }
         }
