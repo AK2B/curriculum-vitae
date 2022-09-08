@@ -243,7 +243,6 @@ footer {
         margin-right: auto;
         margin-top: 25px;
         display: grid;
-        max-width: 1400px;
         grid-template-columns: 30% 70%;
         grid-template-areas: "header header" "aside main"
     }
