@@ -106,10 +106,10 @@ header {
 }
 
 #photo {
-    height: 180px;
+    height: 190px;
     display: block;
     border: thick double #000000;
-    border-radius: 30px;
+    border-radius: 90px;
     -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, -12px 14px 9px 0px rgba(0, 0, 0, 0);
     box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, -12px 14px 9px 0px rgba(0, 0, 0, 0);
 }
